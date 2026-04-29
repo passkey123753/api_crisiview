@@ -19,7 +19,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 sh '''
-                    npx sonarqube-scanner \
+                    sonar-scanner \
                         -Dsonar.projectKey=api_crisiview \
                         -Dsonar.sources=. \
                         -Dsonar.exclusions=node_modules/**,__tests__/**,coverage/** \

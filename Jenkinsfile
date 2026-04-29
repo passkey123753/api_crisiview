@@ -24,7 +24,7 @@ pipeline {
                         -Dsonar.sources=. \
                         -Dsonar.exclusions=node_modules/**,__tests__/**,coverage/** \
                         -Dsonar.tests=__tests__ \
-                        -Dsonar.host.url=http://crisis_sonarqube:9000 \
+                        -Dsonar.host.url=http://crisis-sonarqube:9000 \
                         -Dsonar.login=$SONAR_TOKEN
                 '''
             }

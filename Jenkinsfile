@@ -19,10 +19,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 sh '''
-                    docker run --rm --network crisisview_default \
-                        -v $(pwd):/usr/src \
-                        -w /usr/src \
-                        sonarsource/sonar-scanner-cli:4.6 \
+                    npx sonarqube-scanner \
                         -Dsonar.projectKey=api_crisiview \
                         -Dsonar.sources=. \
                         -Dsonar.exclusions=node_modules/**,__tests__/**,coverage/** \
